@@ -1,0 +1,46 @@
+{
+  "name": "@particle-network/create-authkit",
+  "description": "Scaffold a new Particle Authkit project",
+  "version": "1.0.0",
+  "files": [
+    "dist",
+    "templates"
+  ],
+  "license": "Apache-2.0",
+  "homepage": "https://particle.network",
+  "type": "module",
+  "author": "Felix <chuanfa.chai@gmail.com>",
+  "publishConfig": {
+    "access": "public"
+  },
+  "bin": {
+    "create-authkit": "dist/index.js"
+  },
+  "scripts": {
+    "clean": "rm -rf dist && rm -rf templates && rm -rf generated-test-app",
+    "build": "yarn clean && node build.js",
+    "dev": "node build.js --watch",
+    "typecheck": "tsc --noEmit",
+    "test:setup": "rm -rf generated-test-app && node ./dist/index.js generated-test-app --template next-authkit-app --skip-git --use-yarn",
+    "test:dev": "yarn test:setup && cd generated-test-app && yarn dev",
+    "test:build": "yarn test:setup && cd generated-test-app && yarn build",
+    "test": "yarn test:build"
+  },
+  "dependencies": {
+    "chalk": "5.0.1",
+    "commander": "9.2.0",
+    "cpy": "9.0.1",
+    "execa": "6.1.0",
+    "fs-extra": "10.1.0",
+    "prompts": "2.4.2",
+    "validate-npm-package-name": "4.0.0"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "9.0.13",
+    "@types/prompts": "2.0.14",
+    "@types/validate-npm-package-name": "3.0.3",
+    "esbuild": "^0.15.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5"
+  }
+}
