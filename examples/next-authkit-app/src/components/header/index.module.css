@@ -1,6 +1,8 @@
 .header {
   width: 100%;
   height: 80px;
+  position: fixed;
+  top: 0;
   background-color: #fff;
 }
 
@@ -11,6 +13,7 @@
   margin: 22px auto;
   justify-content: space-between;
   align-items: center;
+  background-color: #fff;
   max-width: 100%;
 }
 

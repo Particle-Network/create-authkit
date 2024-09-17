@@ -59,12 +59,12 @@ const handleDisconnect = async () => {
         <div className={styles['nav-end']}>
           {connectionStatus !== 'connected' && (
               <button className={styles.btn} onClick={handleConnect}>
-                {connectionStatus === 'disconnected' ? 'Connect' : connectionStatus.toUpperCase()}
+                {connectionStatus === 'disconnected' ? 'connect' : connectionStatus}
                </button>
           )}
           {connectionStatus === 'connected' && (
              <button className={styles.btn} onClick={handleDisconnect}>
-                Disconnect
+                disconnect
             </button>
           )}
         </div>
