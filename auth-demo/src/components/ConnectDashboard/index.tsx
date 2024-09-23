@@ -125,6 +125,7 @@ export const ConnectDashboard = () => {
       }
       options = {
         ...options,
+        //@ts-ignore
         jwt: loginAccount,
       };
     }
@@ -177,6 +178,7 @@ export const ConnectDashboard = () => {
     connect({
       authorization,
       chain: connectChain,
+      //@ts-ignore
       socialType: authType,
       prompt: oauthPrompt === 'none' ? undefined : oauthPrompt,
     })
