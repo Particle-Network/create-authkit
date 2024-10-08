@@ -1,4 +1,4 @@
-import type { FeeQuote, FeeQuotesResponse } from '@particle-network/aa/lib/types/types';
+import type { FeeQuote, FeeQuotesResponse } from '@particle-network/aa';
 import { isNullish } from '@particle-network/auth-core';
 import { Button, Drawer, Image, Modal, Radio } from 'antd';
 import BigNumber from 'bignumber.js';

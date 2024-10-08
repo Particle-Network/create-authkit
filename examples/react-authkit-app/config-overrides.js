@@ -30,6 +30,13 @@ module.exports = function override(config, env) {
     return rule;
   });
 
+  config.module.rules.push ({
+    test: /\.m?js/,
+    resolve: {
+      fullySpecified: false
+    }
+  })
+
   return {
     ...config,
     ignoreWarnings: [{
