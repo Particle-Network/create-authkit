@@ -108,13 +108,6 @@ export default function ContractInteraction() {
         throw new Error('Wrong publicClient');
       }
 
-      console.log('222', {
-        address: contractAddress as Address,
-        abi: JSON.parse(abiValue) as Abi,
-        functionName: selectedMethodData.abi?.name as string,
-        args: functionParams || []
-      })
-
       const result = await publicClient.readContract({
         address: contractAddress as Address,
         abi: JSON.parse(abiValue) as Abi,
