@@ -1,13 +1,25 @@
 import { useConnect } from '@particle-network/authkit';
-import './App.css';
+import demoImage from '@/assets/demo.gif';
+import Header from './components/header';
+import Demo from './components/demo';
 
-function App() {
-  const { connect } = useConnect();
+import styles from './App.module.css';
+
+export default function Home() {
+  const { connected } = useConnect();
+
   return (
-    <div className="App">
-      <button onClick={() => connect()}>Connect</button>
-    </div>
-  );
+    <>
+      <Header />
+      <main className={styles['main-content']}>
+        {
+          connected ? (
+            <Demo />
+          ) : (
+            <img sizes='100%' className={styles['demo-img']} src={demoImage} alt='demo' />
+          )
+        }
+      </main>
+    </>
+  )
 }
-
-export default App;

@@ -1,7 +1,7 @@
 'use client';
 
 import { AuthCoreContextProvider, PromptSettingType } from '@particle-network/authkit';
-import { mainnet, polygon } from '@particle-network/authkit/chains';
+import { mainnet, polygon, lineaSepolia } from '@particle-network/authkit/chains';
 import { EntryPosition } from '@particle-network/wallet';
 
 export const ParticleAuthkit = ({ children }: React.PropsWithChildren) => {
@@ -12,7 +12,7 @@ export const ParticleAuthkit = ({ children }: React.PropsWithChildren) => {
         clientKey: process.env.REACT_APP_CLIENT_KEY as string,
         appId: process.env.REACT_APP_APP_ID as string,
         // Locks the chain selector to Ethereum and Polygon
-        chains: [mainnet, polygon],
+        chains: [mainnet, polygon, lineaSepolia],
         language: 'en',
         // You can prompt the user to set up extra security measure upon login or other interactions
         promptSettingConfig: {

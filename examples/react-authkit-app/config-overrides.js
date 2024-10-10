@@ -1,4 +1,5 @@
 const webpack = require('webpack');
+const path = require('path');
 
 module.exports = function override(config, env) {
   //do stuff with the webpack config...
@@ -11,6 +12,8 @@ module.exports = function override(config, env) {
     zlib: require.resolve('browserify-zlib'),
     url: false,
   };
+
+  config.resolve.alias['@'] = path.resolve('src')
 
   config.plugins.unshift(
     new webpack.ProvidePlugin({
@@ -27,5 +30,18 @@ module.exports = function override(config, env) {
     return rule;
   });
 
-  return config;
+  config.module.rules.push ({
+    test: /\.m?js/,
+    resolve: {
+      fullySpecified: false
+    }
+  })
+
+  return {
+    ...config,
+    ignoreWarnings: [{
+      module: /node_modules/,
+      message: /Failed to parse source map/,
+   }],
+  };
 };
