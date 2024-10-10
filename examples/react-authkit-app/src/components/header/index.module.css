@@ -3,7 +3,8 @@
   height: 80px;
   position: fixed;
   top: 0;
-  background-color: #fff;
+  background-color: rgb(var(--background-header));
+  z-index: 10;
 }
 
 .nav {
@@ -13,13 +14,20 @@
   margin: 22px auto;
   justify-content: space-between;
   align-items: center;
-  background-color: #fff;
-  max-width: 100%;
+  max-width: 90%;
+}
+
+.nav-start {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  text-transform: capitalize;
+  font-weight: bold;
 }
 
 .nav-content {
   display: flex;
-  width: 800px;
+  width: 400px;
   justify-content: flex-start;
   gap: 40px;
   align-items: center;
@@ -27,16 +35,17 @@
 
 .nav-end button {
   padding: 8px 20px;
-  background-color: #000;
-  color: #fff;
+  background-color: rgb(var(--foreground-rgb));
+  color: rgb(var(--connect-button-rgb));
   border-radius: 12px;
+  cursor: pointer;
 }
 
 .nav-item {
   font-weight: 500;
   font-size: 16px;
   text-decoration: none;
-  color: #000;
+  color: rgb(var(--foreground-rgb))
 }
 
 .nav-item:hover {

@@ -27,8 +27,9 @@ const handleDisconnect = async () => {
   return (
     <div className={styles.header}>
       <nav className={styles.nav}>
-        <div className={styles['nav-start']}>
-          <Image src={logo} width={150} height={36} alt="logo"></Image>
+      <div className={styles['nav-start']}>
+          <div>particle network</div>
+          <Image src={logo} width={36} height={36} alt="logo"></Image>
         </div>
         <div className={styles['nav-content']}>
           <a           
