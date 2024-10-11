@@ -21,6 +21,16 @@ The following examples are provided in the [examples](./examples/) folder of thi
 * next-authkit-app
 * react-authkit-app
 
+## Open demo in StackBlitz
+
+`next-authkit-app:` 
+
+<a href="https://stackblitz.com/github/Particle-Network/create-authkit/tree/feature/stackblitz/examples/next-authkit-app" target="_blank">![next-authkit-app](https://developer.stackblitz.com/img/open_in_stackblitz.svg)</a>
+
+`react-authkit-app:` 
+
+<a href="https://stackblitz.com/github/Particle-Network/create-authkit/tree/feature/stackblitz/examples/react-authkit-app" target="_blank">![react-authkit-app](https://developer.stackblitz.com/img/open_in_stackblitz.svg)</a>
+
 
 ## Learn More
 
