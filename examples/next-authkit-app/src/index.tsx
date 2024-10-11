@@ -15,7 +15,7 @@ export default function Home() {
     <>
       <Header />
       <main className={styles['main-content']}>
-        {connected ? <Demo /> : <Image sizes='100%' src={demoImage} alt='demo' />}
+        {connected ? <Demo /> : <Image sizes='100%' src={demoImage} style={{ width: '100%' }} alt='demo' />}
       </main>
     </>
   );
