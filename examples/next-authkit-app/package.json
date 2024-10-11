@@ -9,7 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@particle-network/authkit": "^2.0.15",
+    "@particle-network/authkit": "^2.0.16",
+    "@particle-network/wallet": "^2.0.6",
     "next": "14.2.5",
     "react": "^18",
     "react-dom": "^18",

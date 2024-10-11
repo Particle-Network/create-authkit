@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@particle-network/authkit": "^2.0.15",
-    "@particle-network/wallet": "^2.0.5",
+    "@particle-network/authkit": "^2.0.16",
+    "@particle-network/wallet": "^2.0.6",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
