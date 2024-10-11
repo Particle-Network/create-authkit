@@ -84,7 +84,7 @@ function AllTranscation() {
   };
 
   return (
-    <div className="form-item">
+    <div className='form-item'>
       <h3
         onClick={() => {
           setFold(!fold);
@@ -97,7 +97,7 @@ function AllTranscation() {
         <ArrowIcon className={fold ? 'arrow-icon' : 'arrow-icon rotate'} />
       </h3>
       <div className={`fold-content ${fold ? '' : 'display'}`}>
-        <div className="form-input">
+        <div className='form-input'>
           <label>
             <p>Receive address 1</p>
             <Input
@@ -120,7 +120,7 @@ function AllTranscation() {
           </label>
         </div>
 
-        <div className="form-input">
+        <div className='form-input'>
           <label>
             <p>Receive address 2</p>
             <Input
@@ -143,9 +143,9 @@ function AllTranscation() {
           </label>
         </div>
 
-        <div className="form-submit">
+        <div className='form-submit'>
           <Button
-            type="primary"
+            type='primary'
             loading={loading === 1}
             onClick={signAllTransactions}
             disabled={!connected || !address}

@@ -65,16 +65,16 @@ const Header = (props: Props) => {
 
   return (
     <div className={styles.container}>
-      <header className="app-header">
-        <img src={logo.src} className="app-logo" alt="logo" />
+      <header className='app-header'>
+        <img src={logo.src} className='app-logo' alt='logo' />
         <h1>Auth Core</h1>
-        <div className="menus">
-          <Menu className="menu" selectedKeys={[pathName]} mode="horizontal" items={menus} />
+        <div className='menus'>
+          <Menu className='menu' selectedKeys={[pathName]} mode='horizontal' items={menus} />
         </div>
-        <div className="menus-mobile">
+        <div className='menus-mobile'>
           <Popover
             content={
-              <div className="menus-mobile-down">
+              <div className='menus-mobile-down'>
                 {menus.map((menu: any) => {
                   return (
                     <p key={menu.key} onClick={menu.onClick}>
@@ -84,18 +84,18 @@ const Header = (props: Props) => {
                 })}
               </div>
             }
-            trigger="click"
-            placement="bottomLeft"
+            trigger='click'
+            placement='bottomLeft'
           >
             <BarsOutlined />
           </Popover>
-          <div className="particle-title">Particle Demo</div>
+          <div className='particle-title'>Particle Demo</div>
         </div>
-        <div className="connect-box">
-          <div className="header-info">
-            <div className="link-target">
+        <div className='connect-box'>
+          <div className='header-info'>
+            <div className='link-target'>
               <GithubOutlined
-                className="github"
+                className='github'
                 size={24}
                 onClick={() => openWindow('https://github.com/Particle-Network/particle-web-auth-core')}
               />

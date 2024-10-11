@@ -300,11 +300,11 @@ const AASessionKey = () => {
       dataIndex: 'localSession',
       key: 'localSession',
       render: (_, record) => (
-        <Space size="middle">
-          <Button type="primary" loading={mintLoading} onClick={() => runMint(record.localSession, localSessions!)}>
+        <Space size='middle'>
+          <Button type='primary' loading={mintLoading} onClick={() => runMint(record.localSession, localSessions!)}>
             Mint
           </Button>
-          <Button type="primary" danger onClick={() => deleteLocalSession(record.localSession)}>
+          <Button type='primary' danger onClick={() => deleteLocalSession(record.localSession)}>
             Delete
           </Button>
         </Space>
@@ -314,7 +314,7 @@ const AASessionKey = () => {
 
   return (
     <div>
-      <div className="form-item">
+      <div className='form-item'>
         <h3
           onClick={() => {
             setFold(!fold);
@@ -332,8 +332,8 @@ const AASessionKey = () => {
               Smart Account Session Key, you can sign userOp with session signer, this Demo shows the use of session key
               mint ERC-1155 token,{' '}
               <a
-                href="https://docs.particle.network/developers/account-abstraction/smart-account/session-key"
-                target="_blank"
+                href='https://docs.particle.network/developers/account-abstraction/smart-account/session-key'
+                target='_blank'
               >
                 read more.
               </a>
@@ -362,10 +362,10 @@ const AASessionKey = () => {
           )}
 
           {displayAction ? (
-            <div className="form-submit">
+            <div className='form-submit'>
               <Button
                 loading={createSessionsLoading}
-                type="primary"
+                type='primary'
                 disabled={!connected || !address}
                 onClick={startCreateSession}
               >

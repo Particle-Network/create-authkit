@@ -125,8 +125,8 @@ export const ConnectDashboard = () => {
       }
       options = {
         ...options,
-        //@ts-ignore
-        jwt: loginAccount,
+        provider: AuthType.jwt,
+        thirdpartyCode: loginAccount,
       };
     }
     setLoginLoading(true);
@@ -222,13 +222,13 @@ export const ConnectDashboard = () => {
   };
 
   return (
-    <div className="login-box card">
-      <h2 className="login-box-title">Connect Auth Core</h2>
-      <div className="login-option-item">
+    <div className='login-box card'>
+      <h2 className='login-box-title'>Connect Auth Core</h2>
+      <div className='login-option-item'>
         Connect Chain
         <Select
           showSearch
-          defaultValue="none"
+          defaultValue='none'
           style={{ width: 140 }}
           onChange={onConnectChainChange}
           filterOption={(input, option) => {
@@ -246,7 +246,7 @@ export const ConnectDashboard = () => {
           ]}
         />
       </div>
-      <div className="login-option-item">
+      <div className='login-option-item'>
         Authorize
         <Switch
           checked={authorize}
@@ -263,7 +263,7 @@ export const ConnectDashboard = () => {
       </div>
       {authorize && (
         <>
-          <div className="login-option-item">
+          <div className='login-option-item'>
             Unique
             <Switch
               checked={authorizeUniq}
@@ -273,8 +273,8 @@ export const ConnectDashboard = () => {
           </div>
           {connectChain?.name === 'Solana' && (
             <Input.TextArea
-              className="authorize-message-input"
-              placeholder="Message to be signed"
+              className='authorize-message-input'
+              placeholder='Message to be signed'
               value={authorizeMessage}
               autoSize={true}
               onChange={(e) => setAuthorizeMessage(e.target.value)}
@@ -282,7 +282,7 @@ export const ConnectDashboard = () => {
           )}
         </>
       )}
-      <div className="login-option-item">
+      <div className='login-option-item'>
         <div>
           OAuth Prompt
           <Popover content={<div style={{ padding: 10 }}>Only Google/Discord/Microsoft support it.</div>}>
@@ -303,22 +303,22 @@ export const ConnectDashboard = () => {
       </div>
       {selectAuthType !== AuthType.jwt && (
         <>
-          <p className="center-center" style={{ marginTop: 16, marginBottom: 6 }}>
+          <p className='center-center' style={{ marginTop: 16, marginBottom: 6 }}>
             <Input
-              className="input-account"
+              className='input-account'
               value={loginAccount}
               onChange={(e) => setLoginAccount(e.target.value)}
               placeholder={selectAuthType === AuthType.email ? 'email address (optional)' : 'E.164 phone number'}
             />
           </p>
-          <p className="center-center" style={{ marginTop: 0 }}>
+          <p className='center-center' style={{ marginTop: 0 }}>
             <Input
-              className="input-account"
+              className='input-account'
               value={verifyCode}
               onChange={(e) => setVerifyCode(e.target.value)}
-              placeholder="code (optional)"
+              placeholder='code (optional)'
             />
-            <Button type="primary" style={{ marginLeft: 5 }} onClick={getVerifyCode} loading={codeLoading}>
+            <Button type='primary' style={{ marginLeft: 5 }} onClick={getVerifyCode} loading={codeLoading}>
               GET
             </Button>
           </p>
@@ -326,33 +326,33 @@ export const ConnectDashboard = () => {
         </>
       )}
       {selectAuthType === AuthType.jwt && (
-        <p className="center-center" style={{ marginTop: 16 }}>
+        <p className='center-center' style={{ marginTop: 16 }}>
           <Input.TextArea
-            className="input-account"
+            className='input-account'
             value={loginAccount}
             onChange={(e) => setLoginAccount(e.target.value)}
-            placeholder="Json Web Token"
+            placeholder='Json Web Token'
           />
         </p>
       )}
-      <p className="center-center">
+      <p className='center-center'>
         <Button
           loading={loginLoading || connectionStatus === 'connecting'}
-          type="primary"
-          className="login-button"
+          type='primary'
+          className='login-button'
           onClick={() => connectWallet(selectAuthType)}
         >
           Connect
         </Button>
       </p>
-      <div className="login-methods">
+      <div className='login-methods'>
         {loginMethods.map((item, index) => {
           return (
             <img
               key={index}
-              className="method-item"
+              className='method-item'
               src={loginMethods[index].icon}
-              alt=""
+              alt=''
               onClick={() => connectAuthCore(item.type)}
             />
           );

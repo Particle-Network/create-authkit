@@ -9,12 +9,12 @@ const Customize = () => {
 
   return (
     <div className={styles.container}>
-      <Header pathName="Customize" />
-      <div className="container-wrapper">
-        <div className="container-left" ref={iframeContentRef}>
+      <Header pathName='Customize' />
+      <div className='container-wrapper'>
+        <div className='container-left' ref={iframeContentRef}>
           <Templates />
         </div>
-        <div className="container-right">
+        <div className='container-right'>
           <Setting iframeContentRef={iframeContentRef} />
         </div>
       </div>

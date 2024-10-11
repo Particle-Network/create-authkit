@@ -157,13 +157,13 @@ function DemoSetting() {
 
   return (
     <div className={styles.container}>
-      <div className="filter-box card" style={{ flex: 1 }}>
-        <h2 className="filter-title" onClick={() => router.push('/customize.html')} style={{ cursor: 'pointer' }}>
+      <div className='filter-box card' style={{ flex: 1 }}>
+        <h2 className='filter-title' onClick={() => router.push('/customize.html')} style={{ cursor: 'pointer' }}>
           Modal Customize
           <LinkOutlined style={{ marginLeft: 8 }} />
         </h2>
-        <div className="filter-item">
-          <div className="filter-label">Language</div>
+        <div className='filter-item'>
+          <div className='filter-label'>Language</div>
           <Select
             value={language as Language}
             onChange={setLanguage}
@@ -175,8 +175,8 @@ function DemoSetting() {
             getPopupContainer={(triggerNode) => triggerNode.parentNode}
           />
         </div>
-        <div className="filter-item">
-          <div className="filter-label">Auth Theme</div>
+        <div className='filter-item'>
+          <div className='filter-label'>Auth Theme</div>
           <Select
             value={themeType}
             onChange={setThemeType}
@@ -188,8 +188,8 @@ function DemoSetting() {
             getPopupContainer={(triggerNode) => triggerNode.parentNode}
           />
         </div>
-        <div className="filter-item">
-          <div className="filter-label">Fiat Coin</div>
+        <div className='filter-item'>
+          <div className='filter-label'>Fiat Coin</div>
           <Select
             value={fiatCoin}
             onChange={setFiatCoin}
@@ -201,8 +201,8 @@ function DemoSetting() {
             getPopupContainer={(triggerNode) => triggerNode.parentNode}
           />
         </div>
-        <div className="filter-item erc-4337">
-          <div className="filter-label">ERC-4337 (EVM)</div>
+        <div className='filter-item erc-4337'>
+          <div className='filter-label'>ERC-4337 (EVM)</div>
           <Select
             value={ercSelectValue}
             onChange={(value) => {
@@ -223,8 +223,8 @@ function DemoSetting() {
             getPopupContainer={(triggerNode) => triggerNode.parentNode}
           />
         </div>
-        <div className="filter-item">
-          <div className="filter-label">Prompt Master Password</div>
+        <div className='filter-item'>
+          <div className='filter-label'>Prompt Master Password</div>
           <Select
             value={toNumber(promptSettingConfig?.promptMasterPasswordSettingWhenLogin ?? 0).toString()}
             onChange={(value) => {
@@ -238,8 +238,8 @@ function DemoSetting() {
             getPopupContainer={(triggerNode) => triggerNode.parentNode}
           />
         </div>
-        <div className="filter-item">
-          <div className="filter-label">Prompt Payment Password</div>
+        <div className='filter-item'>
+          <div className='filter-label'>Prompt Payment Password</div>
           <Select
             value={toNumber(promptSettingConfig?.promptPaymentPasswordSettingWhenSign ?? 1).toString()}
             onChange={(value) => {
@@ -255,7 +255,7 @@ function DemoSetting() {
         </div>
 
         <Modal
-          title="Enable ERC-4337 Prompt"
+          title='Enable ERC-4337 Prompt'
           open={!isNullish(enableERC4337Prompt)}
           centered
           onCancel={() => setEnableERC4337Prompt(undefined)}
@@ -266,17 +266,17 @@ function DemoSetting() {
         </Modal>
       </div>
 
-      <div className="filter-box card" style={{ flex: 1, marginBottom: 160 }}>
+      <div className='filter-box card' style={{ flex: 1, marginBottom: 160 }}>
         <h2
-          className="filter-title"
+          className='filter-title'
           onClick={() => window.open('https://docs.particle.network/developers/wallet-service/sdks/web')}
           style={{ cursor: 'pointer' }}
         >
           Wallet Customize
           <LinkOutlined style={{ marginLeft: 8 }} />
         </h2>
-        <div className="filter-item">
-          <div className="filter-label">Wallet Entrance</div>
+        <div className='filter-item'>
+          <div className='filter-label'>Wallet Entrance</div>
           <Switch
             defaultChecked={(typeof walletOptions === 'object' && walletOptions?.visible) ?? false}
             checked={(typeof walletOptions === 'object' && walletOptions?.visible) ?? false}
@@ -284,16 +284,11 @@ function DemoSetting() {
               const wallet = walletOptions || {};
               wallet.visible = value;
               setWalletOptions(wallet);
-              // if (value) {
-              //     window.particleAuth?.walletEntryCreate();
-              // } else {
-              //     window.particleAuth?.walletEntryDestroy();
-              // }
             }}
           />
         </div>
-        <div className="filter-item">
-          <div className="filter-label">Wallet Theme</div>
+        <div className='filter-item'>
+          <div className='filter-label'>Wallet Theme</div>
           <Select
             value={(typeof walletOptions === 'object' && walletOptions?.themeType) ?? 'light'}
             onChange={(theme) => {
@@ -309,16 +304,16 @@ function DemoSetting() {
             getPopupContainer={(triggerNode) => triggerNode.parentNode}
           />
         </div>
-        <div className="filter-item column">
-          <div className="filter-label">Custom Style</div>
-          <Button size="small" type="primary" style={{ position: 'absolute', right: 0 }} onClick={setWalletCustomStyle}>
+        <div className='filter-item column'>
+          <div className='filter-label'>Custom Style</div>
+          <Button size='small' type='primary' style={{ position: 'absolute', right: 0 }} onClick={setWalletCustomStyle}>
             Save
           </Button>
           <Input.TextArea
             ref={customTextArea}
             autoSize={true}
-            className="filter-input"
-            placeholder="custom wallet style, json format"
+            className='filter-input'
+            placeholder='custom wallet style, json format'
             defaultValue={
               typeof walletOptions === 'object' && walletOptions !== null
                 ? JSON.stringify(walletOptions.customStyle) || ''

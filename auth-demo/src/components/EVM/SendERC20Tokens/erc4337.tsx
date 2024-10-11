@@ -100,7 +100,7 @@ function ERC4337SendERC20Tokens() {
   };
 
   return (
-    <div className="form-item">
+    <div className='form-item'>
       <h3
         onClick={() => {
           setFold(!fold);
@@ -113,7 +113,7 @@ function ERC4337SendERC20Tokens() {
         <ArrowIcon className={fold ? 'arrow-icon' : 'arrow-icon rotate'} />
       </h3>
       <div className={`fold-content ${fold ? '' : 'display'}`}>
-        <div className="form-input">
+        <div className='form-input'>
           <label>
             <p>Receive address</p>
             <Input
@@ -145,10 +145,10 @@ function ERC4337SendERC20Tokens() {
           </label>
         </div>
 
-        <div className="form-submit">
+        <div className='form-submit'>
           <Button
             disabled={!connected || !address}
-            type="primary"
+            type='primary'
             loading={loading === 1}
             onClick={() => sendTransaction(sendERC20Transaction)}
           >

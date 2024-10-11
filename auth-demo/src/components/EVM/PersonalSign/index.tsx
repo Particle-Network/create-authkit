@@ -59,7 +59,7 @@ function PersonalSign() {
 
   return (
     <div className={styles.container}>
-      <div className="form-item">
+      <div className='form-item'>
         <h3
           onClick={() => {
             setFold(!fold);
@@ -72,7 +72,7 @@ function PersonalSign() {
           <ArrowIcon className={fold ? 'arrow-icon' : 'arrow-icon rotate'} />
         </h3>
         <div className={`fold-content ${fold ? '' : 'display'}`}>
-          <div className="form-input">
+          <div className='form-input'>
             <label
               style={{
                 maxWidth: '100%',
@@ -82,15 +82,15 @@ function PersonalSign() {
               <Input.TextArea
                 onInput={(e: any) => setPersonalData(e.target.value)}
                 placeholder={personalSignMessage}
-                className="result-box"
+                className='result-box'
                 style={{ backgroundColor: '#fff' }}
               />
             </label>
           </div>
 
-          <div className="form-submit">
+          <div className='form-submit'>
             <Checkbox onChange={(t) => setUnique(t.target.checked)}>Unique</Checkbox>
-            <Button loading={!!loading} type="primary" onClick={personalSign} disabled={!connected || !address}>
+            <Button loading={!!loading} type='primary' onClick={personalSign} disabled={!connected || !address}>
               SIGN
             </Button>
           </div>

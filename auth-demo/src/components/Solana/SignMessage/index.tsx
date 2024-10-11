@@ -31,7 +31,7 @@ function SignMessage() {
     }
   };
   return (
-    <div className="form-item sign-solana">
+    <div className='form-item sign-solana'>
       <h3
         onClick={() => {
           setFold(!fold);
@@ -44,19 +44,19 @@ function SignMessage() {
         <ArrowIcon className={fold ? 'arrow-icon' : 'arrow-icon rotate'} />
       </h3>
       <div className={`fold-content ${fold ? '' : 'display'}`}>
-        <div className="form-input">
+        <div className='form-input'>
           <label>
             <p>Message</p>
             <Input.TextArea
               onInput={(e: any) => setMessage(e.target.value)}
               placeholder={personalSignMessage}
-              className="result-box"
+              className='result-box'
               style={{ backgroundColor: '#fff' }}
             ></Input.TextArea>
           </label>
         </div>
-        <div className="form-submit">
-          <Button loading={!!loading} type="primary" onClick={signMessage} disabled={!connected || !address}>
+        <div className='form-submit'>
+          <Button loading={!!loading} type='primary' onClick={signMessage} disabled={!connected || !address}>
             SIGN
           </Button>
         </div>

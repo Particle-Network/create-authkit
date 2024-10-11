@@ -13,7 +13,7 @@ module.exports = function override(config, env) {
     url: false,
   };
 
-  config.resolve.alias['@'] = path.resolve('src')
+  config.resolve.alias['@'] = path.resolve('src');
 
   config.plugins.unshift(
     new webpack.ProvidePlugin({
@@ -30,18 +30,20 @@ module.exports = function override(config, env) {
     return rule;
   });
 
-  config.module.rules.push ({
+  config.module.rules.push({
     test: /\.m?js/,
     resolve: {
-      fullySpecified: false
-    }
-  })
+      fullySpecified: false,
+    },
+  });
 
   return {
     ...config,
-    ignoreWarnings: [{
-      module: /node_modules/,
-      message: /Failed to parse source map/,
-   }],
+    ignoreWarnings: [
+      {
+        module: /node_modules/,
+        message: /Failed to parse source map/,
+      },
+    ],
   };
 };

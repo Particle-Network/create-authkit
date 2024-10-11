@@ -8,19 +8,18 @@ The [Particle Authkit](https://developers.particle.network/api-reference/auth/de
 
 Particle Authkit is a [React](https://react.dev/) library that makes it easy to add social and custom authorization connection to your dapp.
 
-✅ Supports all EVM-compatible chains and Solana chains   
-✅ Supports email, phone, social, and custom authorization    
-✅ Easily customizable   
-✅ [Account Abstraction](https://eips.ethereum.org/EIPS/eip-4337)   
-✅ Embedded Wallet    
+✅ Supports all EVM-compatible chains and Solana chains  
+✅ Supports email, phone, social, and custom authorization  
+✅ Easily customizable  
+✅ [Account Abstraction](https://eips.ethereum.org/EIPS/eip-4337)  
+✅ Embedded Wallet
 
 ## Examples
 
 The following examples are provided in the [examples](./examples/) folder of this repo.
 
-* next-authkit-app
-* react-authkit-app
-
+- next-authkit-app
+- react-authkit-app
 
 ## Learn More
 

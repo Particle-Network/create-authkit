@@ -89,7 +89,7 @@ function ERC4337SendETH() {
   };
 
   return (
-    <div className="form-item">
+    <div className='form-item'>
       <h3
         onClick={() => {
           setFold(!fold);
@@ -102,7 +102,7 @@ function ERC4337SendETH() {
         <ArrowIcon className={fold ? 'arrow-icon' : 'arrow-icon rotate'} />
       </h3>
       <div className={`fold-content ${fold ? '' : 'display'}`}>
-        <div className="form-input">
+        <div className='form-input'>
           <label>
             <p>Receive address</p>
             <Input
@@ -125,8 +125,8 @@ function ERC4337SendETH() {
           </label>
         </div>
 
-        <div className="form-submit">
-          <Button type="primary" loading={loading === 1} onClick={sendTransaction} disabled={!connected || !address}>
+        <div className='form-submit'>
+          <Button type='primary' loading={loading === 1} onClick={sendTransaction} disabled={!connected || !address}>
             SEND
           </Button>
         </div>

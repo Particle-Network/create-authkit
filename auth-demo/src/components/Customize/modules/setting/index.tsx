@@ -185,19 +185,19 @@ const Setting = (props: Props) => {
 
   return (
     <div className={styles.container}>
-      <div className="configuration-container">
-        <Form form={form} layout={'vertical'} autoComplete="off">
+      <div className='configuration-container'>
+        <Form form={form} layout={'vertical'} autoComplete='off'>
           <div className={classNames('select-theme')}>
-            <div className="theme-title">Theme</div>
-            <div className="theme-des">Preset Style</div>
-            <div className="theme-selection">
-              <Radio.Group optionType="button" value={themeMode} onChange={(e) => setThemeMode(e.target.value)}>
-                <Radio value="lightMode">Light Mode</Radio>
-                <Radio value="darkMode">Dark Mode</Radio>
+            <div className='theme-title'>Theme</div>
+            <div className='theme-des'>Preset Style</div>
+            <div className='theme-selection'>
+              <Radio.Group optionType='button' value={themeMode} onChange={(e) => setThemeMode(e.target.value)}>
+                <Radio value='lightMode'>Light Mode</Radio>
+                <Radio value='darkMode'>Dark Mode</Radio>
               </Radio.Group>
             </div>
           </div>
-          <div className="scroll-content">
+          <div className='scroll-content'>
             {[formData.lightGroups, formData.darkGroups].map((themeGroup, themeIndex) => {
               return (
                 <Collapse
@@ -218,7 +218,7 @@ const Setting = (props: Props) => {
                         forceRender={true}
                         header={
                           <>
-                            <img src={item.icon.src} alt="" />
+                            <img src={item.icon.src} alt='' />
                             <Text strong>{item.label}</Text>
                           </>
                         }
@@ -226,7 +226,7 @@ const Setting = (props: Props) => {
                         {item.groups.map((data, dataIndex) => {
                           return (
                             <Form.Item noStyle={true} key={`${item.groupType}-${themeIndex}-${index}-${dataIndex}`}>
-                              <div className="item-label">{data.label}</div>
+                              <div className='item-label'>{data.label}</div>
                               {data.type === ItemType.Color && (
                                 <Form.Item name={data.key} initialValue={data.value}>
                                   <Input
@@ -250,7 +250,7 @@ const Setting = (props: Props) => {
                                           }
                                         >
                                           <div
-                                            className="color-trigger"
+                                            className='color-trigger'
                                             data-bbbbbbbbb={data.value}
                                             style={{
                                               background: data.value,
@@ -265,8 +265,8 @@ const Setting = (props: Props) => {
                                 </Form.Item>
                               )}
                               {data.type === ItemType.Radius && (
-                                <Row className="slider-row">
-                                  <Col span={16} className="slider-wrap">
+                                <Row className='slider-row'>
+                                  <Col span={16} className='slider-wrap'>
                                     <Slider
                                       max={30}
                                       value={parseInt(form.getFieldValue(data.key)) || 0}
@@ -302,7 +302,7 @@ const Setting = (props: Props) => {
                                 <Form.Item name={data.key} initialValue={data.value}>
                                   <InputNumber
                                     className={'m-input-' + data.key[1]}
-                                    type="number"
+                                    type='number'
                                     min={data.key[1] === 'modalWidth' ? 330 : 606}
                                     max={data.key[1] === 'modalWidth' ? 700 : 1000}
                                     onChange={(e) => {
@@ -322,11 +322,11 @@ const Setting = (props: Props) => {
               );
             })}
           </div>
-          <div className="footer btns">
+          <div className='footer btns'>
             <Row>
               <Col>
                 <Button
-                  type="primary"
+                  type='primary'
                   onClick={() => {
                     const formData = form.getFieldsValue();
                     const customStyle = formDataToConfig(formData);
@@ -342,7 +342,7 @@ const Setting = (props: Props) => {
               </Col>
               <Col>
                 <Button
-                  type="default"
+                  type='default'
                   onClick={() => {
                     const formData = getThemeConfigFormData();
                     Object.keys(formData.darkMode).forEach((key) => {
@@ -363,7 +363,7 @@ const Setting = (props: Props) => {
             <Row>
               <Col>
                 <div
-                  className="load-theme"
+                  className='load-theme'
                   onClick={() => {
                     if (
                       props.iframeContentRef.current
@@ -416,7 +416,7 @@ const Setting = (props: Props) => {
 
               <Col>
                 <div
-                  className="copy-theme"
+                  className='copy-theme'
                   onClick={() => {
                     const formData = form.getFieldsValue();
                     const customStyle = formDataToConfig(formData);

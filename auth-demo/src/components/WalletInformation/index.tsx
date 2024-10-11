@@ -157,12 +157,12 @@ export const WalletInformation = () => {
   }, []);
 
   return (
-    <div className="login-box card">
-      <h2 className="login-box-title">Wallet Information</h2>
+    <div className='login-box card'>
+      <h2 className='login-box-title'>Wallet Information</h2>
       {evmAddress && (
         <>
           <h3>
-            <span className="login-label" style={{ height: 32, lineHeight: 2 }}>
+            <span className='login-label' style={{ height: 32, lineHeight: 2 }}>
               EVM Chain:
             </span>
             <Select
@@ -188,7 +188,7 @@ export const WalletInformation = () => {
             />
           </h3>
           <h3>
-            <span className="login-label">EVM Address:</span>
+            <span className='login-label'>EVM Address:</span>
             <span
               style={{ color: '#1890ff', cursor: 'pointer' }}
               onClick={() => {
@@ -201,7 +201,7 @@ export const WalletInformation = () => {
             </span>
           </h3>
           <h3>
-            <span className="login-label">Balance:</span>
+            <span className='login-label'>Balance:</span>
             <span>
               {balance} {chainInfo.nativeCurrency.symbol}
               <RedoOutlined
@@ -224,7 +224,7 @@ export const WalletInformation = () => {
       {solanaAddress && (
         <>
           <h3>
-            <span className="login-label" style={{ height: 32, lineHeight: 2 }}>
+            <span className='login-label' style={{ height: 32, lineHeight: 2 }}>
               Solana Chain:
             </span>
             <Select
@@ -250,7 +250,7 @@ export const WalletInformation = () => {
             ></Select>
           </h3>
           <h3>
-            <span className="login-label">Solana Address:</span>
+            <span className='login-label'>Solana Address:</span>
             <span
               style={{ color: '#1890ff', cursor: 'pointer' }}
               onClick={() => {
@@ -263,7 +263,7 @@ export const WalletInformation = () => {
             </span>
           </h3>
           <h3>
-            <span className="login-label">Balance:</span>
+            <span className='login-label'>Balance:</span>
             <span>
               {solanaBalance} {solanaChainInfo.nativeCurrency.symbol}
               <RedoOutlined
@@ -283,11 +283,11 @@ export const WalletInformation = () => {
 
       <br />
 
-      <div className="center-center flex-column">
-        <div className="button-group">
+      <div className='center-center flex-column'>
+        <div className='button-group'>
           <Button
-            type="primary"
-            className="login-button"
+            type='primary'
+            className='login-button'
             onClick={() => {
               openBuy({
                 network: chainInfo.name,
@@ -300,10 +300,10 @@ export const WalletInformation = () => {
             Buy
           </Button>
         </div>
-        <div className="button-group">
+        <div className='button-group'>
           <Button
-            type="primary"
-            className="login-button"
+            type='primary'
+            className='login-button'
             onClick={() => {
               openWallet({
                 topMenuType: 'close',
@@ -313,10 +313,10 @@ export const WalletInformation = () => {
             Wallet
           </Button>
         </div>
-        <div className="button-group">
+        <div className='button-group'>
           <Button
-            type="primary"
-            className="login-button"
+            type='primary'
+            className='login-button'
             onClick={() => {
               try {
                 openAccountAndSecurity();
@@ -333,8 +333,8 @@ export const WalletInformation = () => {
 
         {!userInfo?.security_account.has_set_master_password && (
           <Button
-            type="primary"
-            className="login-button"
+            type='primary'
+            className='login-button'
             onClick={() => {
               try {
                 openSetMasterPassword();
@@ -349,8 +349,8 @@ export const WalletInformation = () => {
 
         {userInfo?.security_account.has_set_master_password && (
           <Button
-            type="primary"
-            className="login-button"
+            type='primary'
+            className='login-button'
             onClick={() => {
               try {
                 openChangeMasterPassword();
@@ -365,8 +365,8 @@ export const WalletInformation = () => {
 
         {userInfo && needRestoreWallet && (
           <Button
-            type="primary"
-            className="login-button"
+            type='primary'
+            className='login-button'
             onClick={() => {
               try {
                 openRestoreByMasterPassword();
@@ -381,8 +381,8 @@ export const WalletInformation = () => {
 
         {userInfo && !userInfo.security_account.has_set_payment_password && (
           <Button
-            type="primary"
-            className="login-button"
+            type='primary'
+            className='login-button'
             onClick={() => {
               if (userInfo.security_account.email || userInfo.security_account.phone) {
                 openSetPaymentPassword(userInfo.security_account.email || userInfo.security_account.phone!);
@@ -396,24 +396,24 @@ export const WalletInformation = () => {
         )}
 
         {userInfo?.security_account.has_set_payment_password && (
-          <Button type="primary" className="login-button" onClick={openChangePaymentPassword}>
+          <Button type='primary' className='login-button' onClick={openChangePaymentPassword}>
             Change Payment Password
           </Button>
         )}
 
         {(!userInfo?.security_account.email || !userInfo?.security_account.phone) && (
-          <Button type="primary" className="login-button" onClick={openSetSecurityAccount}>
+          <Button type='primary' className='login-button' onClick={openSetSecurityAccount}>
             Set Security Account
           </Button>
         )}
 
         {(userInfo?.security_account.email || userInfo?.security_account.phone) && (
-          <Button type="primary" className="login-button" onClick={openLinkLoginAccount}>
+          <Button type='primary' className='login-button' onClick={openLinkLoginAccount}>
             Link Login Account
           </Button>
         )}
 
-        <Button loading={logoutLoading} type="primary" danger className="login-button" onClick={logout}>
+        <Button loading={logoutLoading} type='primary' danger className='login-button' onClick={logout}>
           Disconnect
         </Button>
       </div>

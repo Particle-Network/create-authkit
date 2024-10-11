@@ -37,14 +37,14 @@ const EVM = () => {
 
   return (
     <>
-      <div className="transaction card">
-        <div className="chain-title">
-          <h2 className="line-title">
+      <div className='transaction card'>
+        <div className='chain-title'>
+          <h2 className='line-title'>
             <SafetyCertificateTwoTone /> &nbsp; EVM
           </h2>
 
           {connected && !address && (
-            <Button type="primary" onClick={createWallet} loading={loading}>
+            <Button type='primary' onClick={createWallet} loading={loading}>
               Enable
             </Button>
           )}

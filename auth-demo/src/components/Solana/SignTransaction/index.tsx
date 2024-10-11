@@ -62,7 +62,7 @@ function SignTransaction() {
     }
   };
   return (
-    <div className="form-item sign-tran">
+    <div className='form-item sign-tran'>
       <h3
         onClick={() => {
           setFold(!fold);
@@ -75,7 +75,7 @@ function SignTransaction() {
         <ArrowIcon className={fold ? 'arrow-icon' : 'arrow-icon rotate'} />
       </h3>
       <div className={`fold-content ${fold ? '' : 'display'}`}>
-        <div className="form-input">
+        <div className='form-input'>
           <label>
             <div style={{ marginBottom: 25 }}>
               <p>Receive address</p>
@@ -102,8 +102,8 @@ function SignTransaction() {
           </label>
         </div>
 
-        <div className="form-submit">
-          <Button loading={!!loading} type="primary" onClick={signTransaction} disabled={!connected || !address}>
+        <div className='form-submit'>
+          <Button loading={!!loading} type='primary' onClick={signTransaction} disabled={!connected || !address}>
             SIGN
           </Button>
         </div>

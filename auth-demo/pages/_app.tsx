@@ -53,13 +53,13 @@ export default function App({ Component, pageProps }: any) {
     <>
       <Head>
         <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no,viewport-fit=cover"
+          name='viewport'
+          content='width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no,viewport-fit=cover'
         />
         <title>Auth Core Demo</title>
         <script
-          id="onpageshow"
-          data-cfasync="false"
+          id='onpageshow'
+          data-cfasync='false'
           dangerouslySetInnerHTML={{
             __html: `
                             if (sessionStorage.getItem('auth-core-oauth-start') === 'true') {

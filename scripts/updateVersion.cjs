@@ -8,6 +8,8 @@ const packages = fs.readdirSync(packagesPath).filter((file) => {
   return fs.statSync(path.join(packagesPath, file)).isDirectory();
 });
 
+packages.push('../auth-demo');
+
 (async () => {
   console.log('--START--');
 

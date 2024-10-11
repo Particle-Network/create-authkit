@@ -1,7 +1,7 @@
 'use client';
 
 import { AuthCoreContextProvider, PromptSettingType } from '@particle-network/authkit';
-import { mainnet, polygon, lineaSepolia } from '@particle-network/authkit/chains';
+import { lineaSepolia, mainnet, polygon } from '@particle-network/authkit/chains';
 import { EntryPosition } from '@particle-network/wallet';
 
 export const ParticleAuthkit = ({ children }: React.PropsWithChildren) => {

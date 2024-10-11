@@ -94,8 +94,8 @@ const Erc4337GasModal = () => {
 
   const contentBody = () => {
     return (
-      <div className="fee-drawer-content">
-        <div className="fee-list">
+      <div className='fee-drawer-content'>
+        <div className='fee-list'>
           {feeQuotesResponse && (
             <div
               className={`gas-fee-item ${feeQuotesResponse.verifyingPaymasterGasless ? '' : 'disabled'}`}
@@ -106,17 +106,17 @@ const Erc4337GasModal = () => {
               }}
             >
               <Radio
-                className="fee-radio"
+                className='fee-radio'
                 checked={selectFeeQuote === null}
                 disabled={isNullish(feeQuotesResponse.verifyingPaymasterGasless)}
               ></Radio>
               <Image
-                className="fee-token-icon"
+                className='fee-token-icon'
                 preview={false}
                 src={require('@/assets/images/icons/aa-icon-gasless.png').default.src}
               ></Image>
-              <div className="fee-token-info">Gassless</div>
-              <div className="fee-token-balance">Free</div>
+              <div className='fee-token-info'>Gassless</div>
+              <div className='fee-token-balance'>Free</div>
             </div>
           )}
 
@@ -132,22 +132,22 @@ const Erc4337GasModal = () => {
                 }}
               >
                 <Radio
-                  className="fee-radio"
+                  className='fee-radio'
                   checked={selectFeeQuote?.tokenInfo?.address === feeQuote.tokenInfo.address}
                   disabled={!hasEnoughGas(feeQuote)}
                 ></Radio>
-                <Image className="fee-token-icon" preview={false} src={formatPng(feeQuote.tokenInfo.logoURI)}></Image>
-                <div className="fee-token-info">
-                  <div className="fee-name">{feeQuote.tokenInfo.symbol}</div>
-                  <div className="fee-address">
+                <Image className='fee-token-icon' preview={false} src={formatPng(feeQuote.tokenInfo.logoURI)}></Image>
+                <div className='fee-token-info'>
+                  <div className='fee-name'>{feeQuote.tokenInfo.symbol}</div>
+                  <div className='fee-address'>
                     {feeQuote.tokenInfo.address.substring(0, 5) +
                       '...' +
                       feeQuote.tokenInfo.address.substring(feeQuote.tokenInfo.address.length - 5)}
                   </div>
                 </div>
-                <div className="fee-token-balance">
-                  <div className="gas-fee">{formatFeeQuote(feeQuote)}</div>
-                  <div className="token-balance">
+                <div className='fee-token-balance'>
+                  <div className='gas-fee'>{formatFeeQuote(feeQuote)}</div>
+                  <div className='token-balance'>
                     {hasEnoughGas(feeQuote) ? feeTokenBalance(feeQuote) : 'Insufficient balance'}
                   </div>
                 </div>
@@ -156,10 +156,10 @@ const Erc4337GasModal = () => {
           })}
         </div>
 
-        <div className="bootom-action">
+        <div className='bootom-action'>
           <Button
-            type="primary"
-            className="btn-aa-send"
+            type='primary'
+            className='btn-aa-send'
             onClick={sendTransaction}
             disabled={selectFeeQuote === undefined}
           >
@@ -172,24 +172,24 @@ const Erc4337GasModal = () => {
 
   return !isMobile() ? (
     <Modal
-      className="erc4337-modal-container"
+      className='erc4337-modal-container'
       zIndex={2000}
       centered={true}
       open={open}
       maskClosable={false}
-      title="Network Fee"
+      title='Network Fee'
       onCancel={onClose}
     >
       {contentBody()}
     </Modal>
   ) : (
     <Drawer
-      className="erc4337-transaction-container"
+      className='erc4337-transaction-container'
       zIndex={2000}
       open={open}
-      placement="bottom"
+      placement='bottom'
       maskClosable={false}
-      title="Network Fee"
+      title='Network Fee'
       height={'auto'}
       onClose={onClose}
     >

@@ -77,46 +77,46 @@ function Home() {
   return (
     <div className={styles.indexContainer}>
       <Header />
-      <div className="app-container">
-        <div className="content-container">
-          <div className="logo-box card">
-            <h2 className="card-title">Particle Network</h2>
-            <h4 className="card-title2">
+      <div className='app-container'>
+        <div className='content-container'>
+          <div className='logo-box card'>
+            <h2 className='card-title'>Particle Network</h2>
+            <h4 className='card-title2'>
               Full-stack Web3 infrastructure provider, To see some running examples of Particle Network, or even use
               them to automatically scaffold a new project, check out the
-              <a href="https://github.com/Particle-Network/particle-web-auth-core"> official examples</a>.
+              <a href='https://github.com/Particle-Network/particle-web-auth-core'> official examples</a>.
             </h4>
 
-            <div className="link-box">
+            <div className='link-box'>
               <Tag
-                className="link-tag"
+                className='link-tag'
                 icon={<DesktopOutlined />}
-                color="#d242ca"
+                color='#d242ca'
                 onClick={() => openWindow(' https://particle.network')}
               >
                 Official Website
               </Tag>
               <Tag
-                className="link-tag"
+                className='link-tag'
                 icon={<ContainerOutlined />}
-                color="#1890ff"
+                color='#1890ff'
                 onClick={() => openWindow(' https://docs.particle.network')}
               >
                 Developer Docs
               </Tag>
               <Tag
-                className="link-tag"
+                className='link-tag'
                 icon={<TwitterOutlined />}
-                color="#55acee"
+                color='#55acee'
                 onClick={() => openWindow('https://twitter.com/ParticleNtwrk')}
               >
                 Twitter
               </Tag>
 
               <Tag
-                className="link-tag"
+                className='link-tag'
                 icon={<DiscordIcon style={{ color: '#fff' }} />}
-                color="#5865f2"
+                color='#5865f2'
                 onClick={() => openWindow('https://discord.com/invite/2y44qr6CR2')}
               >
                 Discord
@@ -124,23 +124,23 @@ function Home() {
             </div>
           </div>
 
-          <div className="download-box card">
-            <h2 className="card-title" style={{ fontSize: 20 }}>
+          <div className='download-box card'>
+            <h2 className='card-title' style={{ fontSize: 20 }}>
               Download Demo
             </h2>
-            <div className="link-box">
+            <div className='link-box'>
               <Tag
-                className="link-tag"
+                className='link-tag'
                 icon={<AppleOutlined />}
-                color="#000"
+                color='#000'
                 onClick={() => openWindow('https://apps.apple.com/us/app/particle-crypto-wallet/id1632425771')}
               >
                 Apple Store
               </Tag>
               <Tag
-                className="link-tag"
+                className='link-tag'
                 icon={<AndroidOutlined />}
-                color="#000"
+                color='#000'
                 onClick={() => openWindow('https://play.google.com/store/apps/details?id=network.particle.auth')}
               >
                 Google Play
@@ -148,16 +148,16 @@ function Home() {
 
               <Popover
                 content={<QRCode size={100} value={isServer() ? '' : window.location.origin + '/qrcode'} />}
-                trigger="click"
+                trigger='click'
               >
-                <Tag className="link-tag" icon={<ScanOutlined />} color="#000">
+                <Tag className='link-tag' icon={<ScanOutlined />} color='#000'>
                   <> QR Code</>
                 </Tag>
               </Popover>
             </div>
           </div>
 
-          <div className="right-container">
+          <div className='right-container'>
             <Skeleton loading={connectionStatus === 'loading'} active paragraph={{ rows: 12 }} title>
               {connected ? <WalletInformation /> : <ConnectDashboard />}
             </Skeleton>

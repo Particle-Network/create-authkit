@@ -45,9 +45,9 @@
   font-weight: 500;
   font-size: 16px;
   text-decoration: none;
-  color: rgb(var(--foreground-rgb))
+  color: rgb(var(--foreground-rgb));
 }
 
 .nav-item:hover {
-  color: #c084fc
+  color: #c084fc;
 }

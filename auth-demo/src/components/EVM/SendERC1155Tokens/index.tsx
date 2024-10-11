@@ -78,7 +78,7 @@ function SendERC1155Tokens() {
     }
   };
   return (
-    <div className="form-item">
+    <div className='form-item'>
       <h3
         onClick={() => {
           setFold(!fold);
@@ -91,11 +91,11 @@ function SendERC1155Tokens() {
         <ArrowIcon className={fold ? 'arrow-icon' : 'arrow-icon rotate'} />
       </h3>
       <div className={`fold-content ${fold ? '' : 'display'}`}>
-        <div className="form-input">
+        <div className='form-input'>
           <label>
             <p>Receive address</p>
             <Input
-              className="input"
+              className='input'
               placeholder={defReceiveAddress}
               readOnly={!!loading}
               // @ts-ignore
@@ -105,7 +105,7 @@ function SendERC1155Tokens() {
           <label>
             <p>Contract address</p>
             <Input
-              className="input"
+              className='input'
               placeholder={defContractAddress}
               readOnly={!!loading}
               // @ts-ignore
@@ -118,7 +118,7 @@ function SendERC1155Tokens() {
               min={0}
               max={10000}
               precision={0}
-              className="input"
+              className='input'
               placeholder={defTokenId}
               readOnly={!!loading}
               onChange={(e: any) => {
@@ -133,7 +133,7 @@ function SendERC1155Tokens() {
               precision={0}
               min={0}
               max={10000}
-              className="input"
+              className='input'
               placeholder={defErcAmount + ''}
               readOnly={!!loading}
               onChange={(e: any) => setErcAmount(Number(e))}
@@ -143,7 +143,7 @@ function SendERC1155Tokens() {
             <p>Chain ID (optional)</p>
             <InputNumber
               min={1}
-              placeholder="Send the transaction to the specified chain"
+              placeholder='Send the transaction to the specified chain'
               precision={0}
               readOnly={!!loading}
               onChange={(e: any) => {
@@ -157,10 +157,10 @@ function SendERC1155Tokens() {
           </label>
         </div>
 
-        <div className="form-submit">
+        <div className='form-submit'>
           <Button
             disabled={!connected || !address}
-            type="primary"
+            type='primary'
             loading={loading === 1}
             onClick={sendERC1155Transaction}
           >

@@ -11,11 +11,12 @@
     "auth-demo"
   ],
   "scripts": {
-    "prettier": "prettier --write '**/*.{js,cjs,jsx,ts,tsx,css,less,sass,html,json}'",
+    "prettier": "prettier --write '**/*.{js,cjs,jsx,ts,tsx,css,less,sass,html,json,md}'",
     "upgrade:particle": "node scripts/updateVersion.cjs"
   },
   "devDependencies": {
     "prettier": "^3.3.3",
+    "prettier-plugin-organize-imports": "^3.2.4",
     "ts-node": "^10.9.2",
     "typescript": "^5.5.4"
   },

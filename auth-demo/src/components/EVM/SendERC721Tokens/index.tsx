@@ -72,7 +72,7 @@ function SendERC721Tokens() {
   };
 
   return (
-    <div className="form-item">
+    <div className='form-item'>
       <h3
         onClick={() => {
           setFold(!fold);
@@ -85,11 +85,11 @@ function SendERC721Tokens() {
         <ArrowIcon className={fold ? 'arrow-icon' : 'arrow-icon rotate'} />
       </h3>
       <div className={`fold-content ${fold ? '' : 'display'}`}>
-        <div className="form-input">
+        <div className='form-input'>
           <label>
             <p>Receive address</p>
             <Input
-              className="input"
+              className='input'
               placeholder={defReceiveAddress}
               readOnly={!!loading}
               // @ts-ignore
@@ -99,7 +99,7 @@ function SendERC721Tokens() {
           <label>
             <p>Contract address</p>
             <Input
-              className="input"
+              className='input'
               placeholder={defContractAddress}
               readOnly={!!loading}
               // @ts-ignore
@@ -112,7 +112,7 @@ function SendERC721Tokens() {
               precision={0}
               min={0}
               max={10000}
-              className="input"
+              className='input'
               placeholder={defTokenId}
               readOnly={!!loading}
               onChange={(e: any) => setTokenId(e?.toString())}
@@ -123,7 +123,7 @@ function SendERC721Tokens() {
             <p>Chain ID (optional)</p>
             <InputNumber
               min={1}
-              placeholder="Send the transaction to the specified chain"
+              placeholder='Send the transaction to the specified chain'
               precision={0}
               readOnly={!!loading}
               onChange={(e: any) => {
@@ -137,10 +137,10 @@ function SendERC721Tokens() {
           </label>
         </div>
 
-        <div className="form-submit">
+        <div className='form-submit'>
           <Button
             disabled={!connected || !address}
-            type="primary"
+            type='primary'
             loading={loading === 1}
             onClick={sendERC721Transaction}
           >

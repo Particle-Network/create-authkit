@@ -75,7 +75,7 @@ function SendERC20Approve() {
     setLoading(0);
   };
   return (
-    <div className="form-item">
+    <div className='form-item'>
       <h3
         onClick={() => {
           setFold(!fold);
@@ -88,7 +88,7 @@ function SendERC20Approve() {
         <ArrowIcon className={fold ? 'arrow-icon' : 'arrow-icon rotate'} />
       </h3>
       <div className={`fold-content ${fold ? '' : 'display'}`}>
-        <div className="form-input">
+        <div className='form-input'>
           <label>
             <p>Receive address</p>
             <Input
@@ -122,7 +122,7 @@ function SendERC20Approve() {
             <p>Chain ID (optional)</p>
             <InputNumber
               min={1}
-              placeholder="Send the transaction to the specified chain"
+              placeholder='Send the transaction to the specified chain'
               precision={0}
               readOnly={!!loading}
               onChange={(e: any) => {
@@ -136,8 +136,8 @@ function SendERC20Approve() {
           </label>
         </div>
 
-        <div className="form-submit">
-          <Button type="primary" loading={loading === 1} onClick={sendERC20Approve} disabled={!connected || !address}>
+        <div className='form-submit'>
+          <Button type='primary' loading={loading === 1} onClick={sendERC20Approve} disabled={!connected || !address}>
             SEND
           </Button>
         </div>

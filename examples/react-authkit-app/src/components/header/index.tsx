@@ -1,7 +1,6 @@
-import Image from 'next/image'
 import logo from '@/assets/images/logo.png';
 import { useConnect } from '@particle-network/authkit';
-import Link from 'next/link'
+import Image from 'next/image';
 
 import styles from './index.module.css';
 
@@ -12,68 +11,57 @@ export default function Header() {
     try {
       await connect();
     } catch (error) {
-        console.log(error);
+      console.log(error);
     }
-};
+  };
 
-const handleDisconnect = async () => {
+  const handleDisconnect = async () => {
     try {
-        await disconnect();
+      await disconnect();
     } catch (error) {
-        console.log(error);
+      console.log(error);
     }
-};
+  };
 
   return (
     <div className={styles.header}>
       <nav className={styles.nav}>
-      <div className={styles['nav-start']}>
+        <div className={styles['nav-start']}>
           <div>particle network</div>
-          <Image src={logo} width={36} height={36} alt="logo"></Image>
+          <Image src={logo} width={36} height={36} alt='logo'></Image>
         </div>
         <div className={styles['nav-content']}>
-          <a           
-            href="https://developers.particle.network/guides/wallet-as-a-service/waas/connect/web-quickstart"
-            target="_blank"
-            className={styles['nav-item']} rel="noreferrer"
+          <a
+            href='https://developers.particle.network/guides/wallet-as-a-service/waas/connect/web-quickstart'
+            target='_blank'
+            className={styles['nav-item']}
+            rel='noreferrer'
           >
             Docs
           </a>
-          <a           
-            href="https://github.com/Particle-Network"
-            target="_blank"
-            className={styles['nav-item']} rel="noreferrer"
-          >
+          <a href='https://github.com/Particle-Network' target='_blank' className={styles['nav-item']} rel='noreferrer'>
             Github
           </a>
-          <a           
-            href="https://particle.network/"
-            target="_blank"
-            className={styles['nav-item']} rel="noreferrer"
-          >
+          <a href='https://particle.network/' target='_blank' className={styles['nav-item']} rel='noreferrer'>
             About
           </a>
-          <a           
-            href="https://demo.particle.network/"
-            target="_blank"
-            className={styles['nav-item']} rel="noreferrer"
-          >
+          <a href='https://demo.particle.network/' target='_blank' className={styles['nav-item']} rel='noreferrer'>
             Demo
           </a>
         </div>
         <div className={styles['nav-end']}>
           {connectionStatus !== 'connected' && (
-              <button className={styles.btn} onClick={handleConnect}>
-                {connectionStatus === 'disconnected' ? 'Connect' : connectionStatus.toUpperCase()}
-               </button>
+            <button className={styles.btn} onClick={handleConnect}>
+              {connectionStatus === 'disconnected' ? 'Connect' : connectionStatus.toUpperCase()}
+            </button>
           )}
           {connectionStatus === 'connected' && (
-             <button className={styles.btn} onClick={handleDisconnect}>
-                Disconnect
+            <button className={styles.btn} onClick={handleDisconnect}>
+              Disconnect
             </button>
           )}
         </div>
       </nav>
-    </div>  
-  )
+    </div>
+  );
 }

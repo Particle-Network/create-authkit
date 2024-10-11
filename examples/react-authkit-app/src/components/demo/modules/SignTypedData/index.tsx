@@ -1,15 +1,15 @@
+import { useEthereum } from '@particle-network/authkit';
 import { useState } from 'react';
 import { toHex } from 'viem';
-import { useEthereum } from '@particle-network/authkit'
-import Collapse from '../Collapse';
 import Button from '../Button';
+import Collapse from '../Collapse';
 import { Textarea } from '../InputWrapper';
 import styles from './index.module.css';
 
 export default function SignTypedData() {
   const [result, setResult] = useState<string>('');
   const [loading, setLoading] = useState(false);
-  const { signTypedData, switchChain } = useEthereum()
+  const { signTypedData, switchChain } = useEthereum();
   // Address tied to the connected wallet (or social login)
 
   const [signTypedDataValue, setSignTypedDataValue] = useState(
@@ -61,32 +61,25 @@ export default function SignTypedData() {
 
       const signature = await signTypedData({
         data,
-        version: 'V4' as any
+        version: 'V4' as any,
       });
-      setResult(`signature: ${signature}`)
+      setResult(`signature: ${signature}`);
     } catch (error) {
-      console.error("Error signing typed data:", error);
+      console.error('Error signing typed data:', error);
     } finally {
       setLoading(false);
     }
-  }
+  };
 
   return (
-    <Collapse title="Sign Typed Data" activeIndex={3}>
+    <Collapse title='Sign Typed Data' activeIndex={3}>
       <div className={styles['collapse-content']}>
-        <Textarea 
-          type='textarea' 
-          label="Message"
-          value={signTypedDataValue}
-          setValue={setSignTypedDataValue}
-        />
-        <Button loading={loading} className={styles['right-btn']} onClick={handleSignTypedData}>SIGN</Button>
+        <Textarea type='textarea' label='Message' value={signTypedDataValue} setValue={setSignTypedDataValue} />
+        <Button loading={loading} className={styles['right-btn']} onClick={handleSignTypedData}>
+          SIGN
+        </Button>
       </div>
-      {
-        result ? (
-          <div className={styles.result}>{result}</div>
-        ) : null
-      }
+      {result ? <div className={styles.result}>{result}</div> : null}
     </Collapse>
-  )
+  );
 }

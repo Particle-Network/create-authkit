@@ -59,7 +59,7 @@ function SignTypedDatav4() {
   };
 
   return (
-    <div className="form-item">
+    <div className='form-item'>
       <h3
         onClick={() => {
           setFold(!fold);
@@ -72,7 +72,7 @@ function SignTypedDatav4() {
         <ArrowIcon className={fold ? 'arrow-icon' : 'arrow-icon rotate'} />
       </h3>
       <div className={`fold-content ${fold ? '' : 'display'}`}>
-        <div className="form-input">
+        <div className='form-input'>
           <label
             style={{
               maxWidth: '100%',
@@ -82,17 +82,17 @@ function SignTypedDatav4() {
             <Input.TextArea
               onInput={(e: any) => setMsg(e.target.value)}
               placeholder={JSON.stringify(typedData, null, 2)}
-              className="result-box"
+              className='result-box'
               style={{ backgroundColor: '#fff' }}
             ></Input.TextArea>
           </label>
         </div>
 
-        <div className="form-submit">
-          <Checkbox className="uniq-checkbox" onChange={(t) => setUnique(t.target.checked)}>
+        <div className='form-submit'>
+          <Checkbox className='uniq-checkbox' onChange={(t) => setUnique(t.target.checked)}>
             Unique
           </Checkbox>
-          <Button loading={!!loading} type="primary" onClick={signTypedDataV4} disabled={!connected || !address}>
+          <Button loading={!!loading} type='primary' onClick={signTypedDataV4} disabled={!connected || !address}>
             SIGN
           </Button>
         </div>

@@ -1,14 +1,13 @@
-import React, { useContext, createContext, useState } from 'react';  
+import React, { createContext, useContext, useState } from 'react';
 interface GlobalState {
   activeIndex: number;
-  setActiveIndex: (value: number) => void
+  setActiveIndex: (value: number) => void;
 }
 
 const GlobalContext = createContext<GlobalState>({} as any);
 
 const ContextProvider = ({ children }: { children: React.ReactNode }) => {
   const [activeIndex, setActiveIndex] = useState(0);
-
 
   return (
     <GlobalContext.Provider
@@ -19,8 +18,8 @@ const ContextProvider = ({ children }: { children: React.ReactNode }) => {
     >
       {children}
     </GlobalContext.Provider>
-  )
-}
+  );
+};
 
 const useActiveIndex = () => {
   const { activeIndex, setActiveIndex } = useContext(GlobalContext);
@@ -28,8 +27,4 @@ const useActiveIndex = () => {
   return { activeIndex, setActiveIndex };
 };
 
-
-export {
-  ContextProvider,
-  useActiveIndex
-}
+export { ContextProvider, useActiveIndex };
