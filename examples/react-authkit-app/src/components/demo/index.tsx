@@ -1,4 +1,3 @@
-import React, { useRef } from 'react';
 import SignMessage from './modules/SignMessage';
 import SendNativeToken from './modules/SendNativeToken';
 import SignTypedData from './modules/SignTypedData';
