@@ -1,5 +1,5 @@
 import React from "react";
-import arrowIcon from '@/assets/images/arrow.svg';
+import arrowIcon from '../../../../assets/images/arrow.svg';
 import classnames from 'classnames';
 import { useActiveIndex } from '../../store/useGlobalState'
 

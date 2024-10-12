@@ -1,5 +1,5 @@
 import { useConnect } from '@particle-network/authkit';
-import demoImage from '@/assets/demo.gif';
+import demoImage from './assets/demo.gif';
 import Header from './components/header';
 import Demo from './components/demo';
 

@@ -12,6 +12,7 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "ajv": "^8.17.1",
     "assert": "^2.1.0",
     "browserify-zlib": "^0.2.0",
     "https-browserify": "^1.0.0",

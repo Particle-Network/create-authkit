@@ -29,7 +29,7 @@ The following examples are provided in the [examples](./examples/) folder of thi
 
 `react-authkit-app:` 
 
-<a href="https://stackblitz.com/github/Particle-Network/create-authkit/tree/feature/stackblitz/examples/react-authkit-app" target="_blank">![react-authkit-app](https://developer.stackblitz.com/img/open_in_stackblitz.svg)</a>
+<a href="https://stackblitz.com/github/Particle-Network/create-authkit/tree/feature/stackblitz/examples/react-authkit-app?preset=node&terminal=start" target="_blank">![react-authkit-app](https://developer.stackblitz.com/img/open_in_stackblitz.svg)</a>
 
 
 ## Learn More
