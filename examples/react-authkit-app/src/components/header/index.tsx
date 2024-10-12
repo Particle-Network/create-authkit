@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import logo from '../../assets/images/logo.png';
 import { useConnect } from '@particle-network/authkit';
-import Link from 'next/link'
 
 import styles from './index.module.css';
 
