@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import logo from '../../assets/images/logo.png';
 import { useConnect } from '@particle-network/authkit';
 
@@ -28,7 +27,7 @@ const handleDisconnect = async () => {
       <nav className={styles.nav}>
       <div className={styles['nav-start']}>
           <div>particle network</div>
-          <Image src={logo} width={36} height={36} alt="logo"></Image>
+          <img src={logo} width={36} height={36} alt="logo"></img>
         </div>
         <div className={styles['nav-content']}>
           <a           
