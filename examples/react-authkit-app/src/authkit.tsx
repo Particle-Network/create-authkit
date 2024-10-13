@@ -8,9 +8,9 @@ export const ParticleAuthkit = ({ children }: React.PropsWithChildren) => {
   return (
     <AuthCoreContextProvider
       options={{
-        projectId: process.env.REACT_APP_PROJECT_ID as string,
-        clientKey: process.env.REACT_APP_CLIENT_KEY as string,
-        appId: process.env.REACT_APP_APP_ID as string,
+        projectId: 'b9036c26-ed43-4050-912b-da07266c9407',
+        clientKey: 'cQ3msMq0BiHTuV9csvCJJnDnrvhTeCVIbO9qk4sH',
+        appId: 'a3167218-5b1d-454f-9d7f-4a58c67cf8fb',
         // Locks the chain selector to Ethereum and Polygon
         chains: [mainnet, polygon, lineaSepolia],
         language: 'en',
